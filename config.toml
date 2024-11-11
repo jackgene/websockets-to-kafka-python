@@ -1,0 +1,7 @@
+[source]
+websockets.url = "wss://rx-word-cloud-a6d92948462c.herokuapp.com/subscribe"
+
+[destination]
+[destination.kafka]
+topic_name = "word-cloud.chat-message"
+bootstrap_servers = ["127.0.0.1:9092"]
