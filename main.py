@@ -36,7 +36,7 @@ async def stream(
             logging.info('WebSocket connection established')
             data: Data
             async for data in ws_conn:
-                logging.info(f'Processing {data}')
+                logging.info(f'Processing {data!r}')
                 msg: dict[str, str] = json.loads(data)
                 await kafka_producer.send(topic, msg, msg['s'])
 
